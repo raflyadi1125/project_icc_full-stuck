@@ -11,7 +11,7 @@ const Tablelist = () => {
 
   return (
     <div className="min-h-screen bg-gray-800 text-white p-6 ">
-      <div className="flex justify-between items-center mt-20 mb-4">
+      <div className="flex justify-between items-center mt-25 mb-4">
         <h1 className="text-2xl font-semibold">Clients</h1>
         <div className="flex space-x-4">
           <input
