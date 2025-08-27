@@ -5,7 +5,6 @@ const Hero = () => {
     <section className="min-h-screen bg-gradient-to-b from-gray-900 to-gray-800 text-white flex items-center py-20">
       <div className="mx-auto max-w-7xl px-6 w-full">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
-          {/* Kiri - Teks */}
           <div className="text-center md:text-left">
             <h1 className="text-4xl md:text-6xl font-extrabold leading-tight">
               Temukan{" "}
@@ -28,7 +27,6 @@ const Hero = () => {
             </div>
           </div>
 
-          {/* Kanan - Gambar */}
           <div className="flex justify-center md:justify-end">
             <img
               src="gambar.jpg"

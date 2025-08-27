@@ -2,22 +2,27 @@ import { Link } from "react-router-dom";
 import { useEffect, useState } from "react";
 
 const Navbar = () => {
-  const [show, setShow] = useState(false);
-  const [scroll, setScroll] = useState(false);
+  const [show, setShow] = useState (false);
+  const [scroll, setScroll] = useState (false);
 
-  const handleClick = () => setShow(!show);
+  const handleClick = () => {
+    setShow (!show);
+    console.log(show);
+  };
 
   useEffect(() => {
-    const handleScroll = () => {
-      setScroll(window.scrollY > 5);
-      if (window.scrollY > 5) setShow(false);
-    };
-    window.addEventListener("scroll", handleScroll);
+    window.addEventListener("scroll", () => {
+      if (window.scrollY > 5) {
+        console.log("testing");
+        setScroll(true);
+        setShow(false);
+      } else {
+        setScroll(false)
+      }
+    });
+  });
 
-    return () => window.removeEventListener("scroll", handleScroll);
-  }, []);
-
-  const scrollActive = scroll ? "py-4 bg-gray-900 shadow-md" : "py-6";
+  let scrollActive = scroll ? "py-5 bg-gray-900 shadow" : "py-4"
 
   return (
     <div
@@ -51,7 +56,7 @@ const Navbar = () => {
             </li>
             <li>
               <a
-                href="#layanan"
+                href="#Layanan"
                 className="hover:text-blue-400 transition-colors"
               >
                 Layanan
@@ -96,7 +101,7 @@ const Navbar = () => {
             <a href="#about" className="block hover:text-blue-400">
               About
             </a>
-            <a href="#layanan" className="block hover:text-blue-400">
+            <a href="#Layanan" className="block hover:text-blue-400">
               Layanan
             </a>
             <a href="#social" className="block hover:text-blue-400">
@@ -108,6 +113,7 @@ const Navbar = () => {
             >
               Client
             </Link>
+            <i className="ri-menu-3-line text-3xl md:hidden block" onClick={handleClick}></i>
           </div>
         )}
       </nav>

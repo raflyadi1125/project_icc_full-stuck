@@ -1,13 +1,12 @@
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
-import ScrollToTop from "./components/ScrollTop";
+
 import AppRouter from "./router";
 
 function App() {
   return (
     <div className="flex flex-col min-h-screen">
       <Navbar />
-      <ScrollToTop />
       <main className="flex-1">
         <AppRouter />
       </main>
